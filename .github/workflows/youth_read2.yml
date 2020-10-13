@@ -6,7 +6,7 @@ name: youth_read2
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/20 * * * *'
+     - cron: '*/29 19-23 * * *'
   watch:
     types: started
 jobs:
@@ -22,8 +22,14 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【中青看点自动阅读】'
+      - name: '运行 【中青看点-文章阅读-51】'
         run: |
-          node Task/Youth_Read2.js
+          node Task/Youth_Read.js
         env:
-          YOUTH_READ2: ${{ secrets.YOUTH_READ2 }}
+          YOUTH_READ: ${{ secrets.YOUTH_READ2 }}
+
+      - name: '运行 【中青看点-文章阅读2-50】'
+        run: |
+          node Task/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ2 }}
