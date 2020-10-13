@@ -6,7 +6,7 @@ name: youth_read
 on:
   workflow_dispatch:
   schedule:
-     - cron: '29 * * * *'
+     - cron: '29 1-5 * * *'
   watch:
     types: started
 jobs:
@@ -28,7 +28,7 @@ jobs:
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ }}
 
-      - name: '运行 【中青看点-视频观看-51】'
+      - name: '运行 【中青看点-视频观看2-50】'
         run: |
           node Task/Youth_Read.js
         env:
