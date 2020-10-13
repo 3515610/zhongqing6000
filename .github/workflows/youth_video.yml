@@ -26,12 +26,12 @@ jobs:
         run: |
           node Task/Youth_Read.js
         env:
-          YOUTH_READ: ${{ secrets.YOUTH_READ }}
+          YOUTH_READ: ${{ secrets.YOUTH_VIDEO }}
 
       - name: '运行 【中青看点-视频观看2-50】'
         run: |
           node Task/Youth_Read.js
         env:
-          YOUTH_READ: ${{ secrets.YOUTH_READ2 }}
+          YOUTH_READ: ${{ secrets.YOUTH_VIDEO2 }}
 
     
