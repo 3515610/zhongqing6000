@@ -26,10 +26,10 @@ jobs:
         run: |
           node Task/Youth_Read.js
         env:
-          YOUTH_READ: ${{ secrets.YOUTH_READ }}
+          YOUTH_READ: ${{ secrets.YOUTH_READ3 }}
 
       - name: '运行 【中青看点-文章阅读2-50】'
         run: |
           node Task/Youth_Read.js
         env:
-          YOUTH_READ: ${{ secrets.YOUTH_READ2 }}
+          YOUTH_READ: ${{ secrets.YOUTH_READ4 }}
