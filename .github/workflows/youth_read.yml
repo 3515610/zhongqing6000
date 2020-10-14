@@ -11,6 +11,8 @@ on:
     types: started
 jobs:
   build:
+    env:
+      YOUTH_READ4: ${{ secrets.YOUTH_READ4 }}
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
@@ -22,6 +24,12 @@ jobs:
       - name: npm install
         run: |
           npm install
+      - name: '运行 【中青看点-文章阅读4-测试篇】'
+        if: env.YOUTH_READ4
+        run: |
+          node Task/Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ4 }}          
       - name: '运行 【中青看点-文章阅读-54篇】'
         run: |
           node Task/Youth_Read.js
