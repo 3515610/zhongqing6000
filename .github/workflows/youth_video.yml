@@ -16,7 +16,7 @@ jobs:
       YOUTH_VIDEO: ${{ secrets.YOUTH_VIDEO }}
       YOUTH_VIDEO2: ${{ secrets.YOUTH_VIDEO2 }}
       YOUTH_VIDEO3: ${{ secrets.YOUTH_VIDEO3 }}
-      YOUTH_VIDE4: ${{ secrets.YOUTH_VIDEO4 }}
+      YOUTH_VIDE04: ${{ secrets.YOUTH_VIDEO4 }}
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
