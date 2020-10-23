@@ -6,9 +6,11 @@ name: youth
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/12 * * * *'
+     - cron: '0 19 * * *'
   watch:
     types: started
+env:
+  TZ: Asia/Shanghai
 
 jobs:
   build:
